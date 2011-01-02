@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Code View</title>
+	<style type="text/css">
+	body,html{
+		padding:0;
+		margin:0;
+		height:100%;
+	}
+	* {margin:0;padding:0}
+	body {
+		background:#000;
+		color:#fff;
+		font-size:90%;
+		font-family:sans-serif;
+	}
+	div {
+		text-align:center;
+		line-height:1em;
+	}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+// <![CDATA[
+
+var body = document.body;
+var tally = 0;
+while(tally<body.clientWidth-30){
+	var d = document.createElement("div");
+	d.id = "t_"+tally;
+	d.style.width = "1em";
+	d.style.height = "100%";
+	d.style.overflow = "hidden";
+	d.style.position = "absolute";
+	d.style.top = "0px";
+	d.style.left = tally+"px";
+	body.appendChild(d);
+	setTimeout("code('t_"+tally+"');",200);
+	tally += d.clientWidth;
+}
+function code(id){
+	if(Math.round(Math.random())==1){
+		var cc = document.getElementById(id);
+		var l = cc.innerHTML.length;
+		cc.innerHTML = "";
+		var iht = "";
+		for(var i=0;i<Math.min(l+2,150) * (Math.random() + 0.3);i++)
+			iht += Math.round(Math.random()) + "<br />";
+		cc.innerHTML = iht;
+	}
+	setTimeout("code('"+id+"');",Math.random() * 1000 + 500);
+}
+
+
+// ]]>
+</script>
+</body>
+</html>

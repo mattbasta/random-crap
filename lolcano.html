@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>LOLCANO</title>
+<style type="text/css">
+*{padding:0;margin:0}
+body {height:100%}
+#cano {
+	position:absolute;
+	bottom:0;
+	text-align:center;
+	width:100%;
+}
+#lolz {
+	height:200px;
+	position:relative;
+}
+#lolz span {
+	display:block;
+	position:absolute;
+}
+</style>
+</head>
+<body>
+<div id="cano">
+	<div id="lolz">
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+		<span>LOL</span>
+	</div>
+omg<br />
+omgomg<br />
+omgomgomg<br />
+omgomgomgomg<br />
+omgomgomgomgomg<br />
+omgomgomgomgomgomg<br />
+omgomgomgomgomgomgomg<br />
+omgomgomgomgomgomgomgomg<br />
+omgomgomgomgomgomgomgomgomg<br />
+omgomgomgomgomgomgomgomgomgomg<br />
+omgomgomgomgomgomgomgomgomgomgomg<br />
+omgomgomgomgomgomgomgomgomgomgomgomg<br />
+omgomgomgomgomgomgomgomgomgomgomgomgomg<br />
+omgomgomgomgomgomgomgomgomgomgomgomgomgomg<br />
+omgomgomgomgomgomgomgomgomgomgomgomgomgomgomg<br />
+omgomgomgomgomgomgomgomgomgomgomgomgomgomgomgomg
+<script type="text/javascript">
+var lolicate = function(){
+	var l = document.getElementById("lolz");
+	var lz = l.getElementsByTagName("span");
+	for(var i=0;i<lz.length;i++){
+		var state = Math.random() * 1;
+		switch(Math.round(state)){
+			case 0:
+				lz[i].style.display = "none";
+				break;
+			case 1:
+				lz[i].style.display = "block";
+				lz[i].style.left = (Math.random()*50+25)+"%";
+				lz[i].style.top = (Math.random()*100)+"%";
+				break;
+		}
+	}
+	setTimeout(lolicate,100);
+}
+window.onload = lolicate;
+</script>
+</div>
+</body>
+</html>

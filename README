@@ -1,0 +1,34 @@
+Matt Basta's Random Crap
+
+Index:
+
+bork.php
+A fun little translator to how the Swedish Chef would pronounce things.
+http://serverboy.net/projects/bork/
+
+browserstress.html
+I wrote it to scare the crap out of a teacher once. Put this bad boy full
+screen and it'll make them think you're about to launch a missile. Now I use
+it to stress out new browsers and see how they run.
+
+lolcano.html
+The name is self-explanatory.
+
+physicsisnotbingo.php
+A clone of barackobamaisyournewbicycle.com
+
+study tools/solmem.html
+A tool I wrote to help me memorize the "To be or not to be" soliloquy.
+
+min-height/
+This directory has a little demo that I put together when I was 17 while
+working at Solid Cactus Inc. It was a way to apply min-height to an element
+in IE6. Unfortunately, IE8 came out right around that time and nobody cared
+because IE6 was making its death march.
+
+spider/
+This is a crappy little web spider that I wrote a few years ago in PHP. It
+wasn't designed to be the next Google, it was designed to be a slick little
+tool that I could use to create visualizations of the net and such.
+
+
