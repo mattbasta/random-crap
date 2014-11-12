@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code View</title>
+  <style type="text/css">
+  body, html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 90%;
+  }
+  div {
+    line-height: 1em;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+<script>
+function init() {
+  var body = document.body;
+  var tally = 0;
+  while (tally < body.clientWidth - 30) {
+    var d = document.createElement('div');
+    d.id = 't_' + tally;
+    d.style.width = '1em';
+    d.style.height = '100%';
+    d.style.overflow = 'hidden';
+    d.style.position = 'absolute';
+    d.style.top = '0';
+    d.style.left = tally + 'px';
+    body.appendChild(d);
+    setTimeout(code, 200, d.id);
+    tally += d.clientWidth;
+  }
+  function code(id) {
+    if (Math.round(Math.random()) === 1) {
+      var cc = document.getElementById(id);
+      var l = cc.innerHTML.length;
+      cc.innerHTML = '';
+      var iht = '';
+      for(var i = 0; i < Math.min( l + 2, 150) * (Math.random() + 0.3); i++) {
+        iht += Math.round(Math.random()) + '<br>';
+      }
+      cc.innerHTML = iht;
+    }
+    setTimeout(code, Math.random() * 1000 + 500, id);
+  }
+}
+
+window.onload = init;
+
+</script>
+</body>
+</html>

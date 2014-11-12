@@ -60,11 +60,11 @@ omgomgomgomgomgomgomgomgomgomgomgomgomgomg<br />
 omgomgomgomgomgomgomgomgomgomgomgomgomgomgomg<br />
 omgomgomgomgomgomgomgomgomgomgomgomgomgomgomgomg
 <script type="text/javascript">
-var lolicate = function(){
+var lolicate = function() {
 	var l = document.getElementById("lolz");
 	var lz = l.getElementsByTagName("span");
 	for(var i=0;i<lz.length;i++){
-		var state = Math.random() * 1;
+		var state = Math.round(Math.random());
 		switch(Math.round(state)){
 			case 0:
 				lz[i].style.display = "none";
